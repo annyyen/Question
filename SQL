@@ -1,0 +1,13 @@
+Q2: Write an SQL query to report all customers who never order anything.
+
+SELECT C.name as Customers
+FROM Customers C
+WHERE C.id NOT in (SELECT customerId FROM Orders)
+
+
+Q3: Write an SQL query to report all the duplicate emails. Return the result table in any order
+
+SELECT email 
+FROM Person 
+GROUP BY email 
+HAVING COUNT(email) > 1

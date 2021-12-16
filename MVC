@@ -1,0 +1,16 @@
+Q1: What is the difference between session, tempdata, viewdata, and viewbag?
+
+頁面間和 Controller 與 View 之間傳遞引數的方式有4種: Session, TempData, ViewData, ViewBag
+
+Session: Pass the data from the controller to the view and Action to Action. Session is valid for all requests, not for a single redirect and it is also need typecasting to getting data and check for null values to avoid error.
+TempData: Gets the temporary data to pass to the view. TempData is used to pass data from current request to subsequent request.
+ViewData: Gets or sets a dictionary that contains data to pass between the controller and the view.
+ViewBag: Gets the view bag. 能產生動態屬性
+
+
+Q2: What are the different types of action filters?
+
+1. Authorization Filters 授權過濾器: 執行身份驗證或驗證請求
+2. Action Filters 動作過濾器: 執行動作或額外的處理
+3. Result Filters 結果過濾器: 對結果執行額外的處理，例如修改 HTTP response
+4. Exception Filters 例外過濾器: 記錄或顯示錯誤頁面。如果在 Action 方法的某處拋出未處理的異常，則執行，從授權過濾器開始，以結果的執行結束。
