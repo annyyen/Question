@@ -1,0 +1,37 @@
+Q1: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+public class Solution {
+ public int[] Question1(int[] nums, int target) {
+    for i in range(len(nums)):
+        if numMap.__contains__(target-nums[i]):
+                return [numMap.get(target-nums[i]), i]
+        else:
+            numMap[nums[i]] = i
+ }
+}
+
+
+
+Q7: Given an integer n, return true if it is a power of four. Otherwise, return false.
+
+public class Solution {
+ public bool Question7(int num) {
+    if(n < 1)
+            return false;
+        string bins = toBinary(n);
+        int count=0;
+        for(char& c : bins) {
+            if(c == '1')
+                count++;
+        }
+    return count == 1; 
+ }
+ private string toBinary(int n){
+        string bins;
+        while(n != 0){
+            bins += (n % 2 == 0 ? "0": "1");
+            n /= 2;
+        }
+    return bins;
+    }
+}
